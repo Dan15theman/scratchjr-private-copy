@@ -1,0 +1,55 @@
+.scanframe {
+    position: absolute;
+    z-index: 10000;
+    background-color: red;
+    background-size: 100%;
+    display: none;
+    width: ${css_vw(100)};
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.scancancelicon {
+    display: inline-block;
+    position: relative;
+    margin: ${css_vh(0.00)} ${css_vh(0.91)} ${css_vh(0.00)};
+    width: ${css_vh(8.46)};
+    height: ${css_vh(8.46)};
+    background: url('../assets/paint/cancel.svg');
+    background-size: 100.5%; /* webview pixelates the image unless we do this */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.scancancelicon:active {
+    background: url('../assets/paint/cancelPressed.svg');
+    background-size: 100.5%; /* webview pixelates the image unless we do this */
+}
+
+.scanframe.appear {display: block;}
+
+.scanframe.disappear {display: none;}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: ${css_vh(9.77)};
+    overflow: hidden;
+    text-shadow: none;
+    z-index: 11000;
+    background: url('../assets/pagebkg.png');
+    background-size: 100%;
+    -webkit-box-shadow: 0px ${1 * scaleMultiplier}px ${3 * scaleMultiplier}px rgba(166, 168, 171, 1);
+    border: 0px solid #fff;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(166, 168, 171, 1);
+}
+
+.topbar .actions {
+    margin: ${css_vh(0.65)} ${css_vh(0.00)} ${css_vh(0.00)};
+    height: ${css_vh(8.46)};
+}
